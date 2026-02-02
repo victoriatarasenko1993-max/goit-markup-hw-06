@@ -140,7 +140,7 @@ button {
 }
 
 .mobile-menu-nav {
-  margin-bottom: auto;
+    margin-bottom: auto;
 }
 .mobile-nav-item {
     margin-bottom: 40px;
@@ -217,18 +217,25 @@ button {
 .main-solutions { 
     padding: 72px 0;
     background-color: #2e2f42;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/bgi/people-office-mob-1x.jpg");
+    background-image: 
+      linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url("../images/bgi/people-office-mob-1x.jpg");
     max-width: 320px;
     margin: 0 auto;
+    padding: 72px 0;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    @media screen and (min-resolution: 2x), (-webkit-min-device-pixel-ratio: 2) {
-     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/bgi/people-office-mob-2x.jpg");
     }
-}
 
+    @media screen and (min-resolution: 2x),
+    (min-device-pixel-ratio: 2) {
+        .main-solutions {
+        background-image:
+            linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url("../images/bgi/people-office-mob-2x.jpg");
+    }
+    }
 
 .main-heading {
     font-size: 36px;
@@ -257,6 +264,8 @@ button {
     background-color: #4d5ae5;
     margin: 0 auto;
     display: block;
+     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 .order-button:hover,
@@ -303,13 +312,13 @@ button {
 }
 
 .main-team {
+    padding: 96px 0;
     background-color: #f4f4fd;
 }
 
 .team-container {
     max-width: 296px;
 }
-
 
 .team {
     margin-bottom: 72px;
@@ -324,8 +333,7 @@ button {
 .team-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 72px;
-    
+    gap: 72px; 
 }
 
 .team-item-container {
@@ -414,6 +422,9 @@ button {
     width: 100%;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: #fff; 
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-item-container {
@@ -459,7 +470,7 @@ button {
 .portfolio-item-text {
     position: relative;
     overflow: hidden;
-    height: 280px;
+   
 }
 
 .portfolio-item-text img {
@@ -468,34 +479,37 @@ button {
     margin: 0 auto;
 }
 
-
 .portfolio-item:hover .overlay-text,
 .portfolio-item-text:hover {
     transform: translateY(0%);
 }
 
 .page-footer {
-    padding: 96px 16px;
+    padding: 96px 0;
     background-color: #2e2f42;
 }
 
 .footer-container {
+    gap: 72px;
     display: flex;
     flex-direction: column;
-   align-items: center; 
+    align-items: center; 
 }
 
 .footer-logo {
     margin-bottom: 16px;
 }
+.logo.footer-logo {
+    text-align: center;
+}
 
 .footer-text {
-    
+    text-align: left;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
     max-width: 264px;
-
+    padding-top: 16px;
 }
 
 .footer-logo .logo-part {
@@ -508,6 +522,7 @@ button {
    letter-spacing: 0.02em;
    color: #fff;
    margin-bottom: 16px;
+   text-align: center;
 }
 
 .footer-list {
@@ -537,15 +552,16 @@ button {
     fill: #f4f4fd;
 }
 .footer-info {
-    margin: 0;
+    /* gap: 72px; */
     width: 288px;
-    text-align: left;
+    text-align: center;
 }
 .footer-subscribe {
      margin: 0;
     align-items: center;
-    width: 100%;
+   
 }
+
 .footer-input {
     border-radius: 4px;
     width: 288px;
@@ -555,7 +571,7 @@ button {
     line-height: 2;
     letter-spacing: 0.04em;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    padding-left: 16px;
+    padding:8px 16px;
     background-color: transparent;
     color: #ffffff;
     border: 1px solid #ffffff;
@@ -581,6 +597,7 @@ button {
     letter-spacing: 0.02em;
     margin-bottom: 16px;
     color: #ffffff;
+    text-align: center;
     
 }
 
@@ -591,7 +608,6 @@ button {
     width: 100%;
     gap: 24px;
 }
-
 
 .footer-button {
     display: flex;
@@ -613,7 +629,6 @@ button {
     margin: 0 auto;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 .footer-button:hover,
 .footer-button:focus{
@@ -646,16 +661,15 @@ button {
     flex-shrink: 0;
     top: 50%;
     left: 50%;
-    max-width: 408px;
+    width: 288px;
     min-height: 584px;
     border-radius: 4px;
-    padding: 24px 16px;
+    padding: 24px;
     transform: translate(-50%,-50%);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background-color: #fcfcfc;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 .close-button {
     display: flex;
@@ -824,9 +838,6 @@ button {
     transition: background-color 250ms, border 250ms, fill 250ms, cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-checkbox {
-    display: none;
-}
 .input-checkbox:checked +.check-modal .span-checkbox {
     background-color: #404bbf;
     border: none;
@@ -857,7 +868,7 @@ button {
 
   .header-logo {
     padding: 24px 0;
-    margin-right: 120px;
+    
   }
 
   .nav-link {
@@ -925,10 +936,16 @@ button {
     .main-solutions { 
         padding: 112px 0;
         background-color: #2e2f42;
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/bgi/people-office-tab-1x.jpg");
+        background-image: 
+        linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+        url("../images/bgi/people-office-tab-1x.jpg");
         max-width: 768px;
+    }
          @media screen and (min-resolution: 2x), (-webkit-min-device-pixel-ratio: 2) {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/bgi/people-office-tab-2x.jpg");
+            .main-solutions {
+            background-image: 
+            linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+            url("../images/bgi/people-office-tab-2x.jpg");
       }
     }
     .main-heading {
@@ -948,6 +965,9 @@ button {
     }
     .features-heading {
         text-align: left;
+    }
+    .team-container {
+        padding: 0 108px;
     }
      .team-list {
         flex-direction: row;
@@ -969,18 +989,23 @@ button {
     .portfolio-item-text {
         height: 300px;
     }
+    .footer-info,
+    .footer-icons-heading,
+    .footer-subscribe-heading {
+        text-align: left;
+    }
+    .footer-input {
+        width: 264px;
+    }
     .footer-container {
         flex-direction: row;
         flex-wrap: wrap;
-        
-    }
-    .footer-info{
+        padding: 0 108px;
         gap: 72px 24px;
-    } 
-    .page-footer {
-    padding: 96px 108px;
     }
- }
+}
+        
+ 
     
 @media screen and (min-width: 1158px) {
     .container {
@@ -1004,16 +1029,23 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
   }
-    .main-solutions { 
-        padding: 188px 0;
-        background-color: #2e2f42;
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/bgi/people-office-1x.jpg");
-        max-width: 1440px;
-
-         @media screen and (min-resolution: 2x), (-webkit-min-device-pixel-ratio: 2) {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/bgi/people-office-2x.jpg");
-      }
+  .main-solutions { 
+    padding: 188px 0;
+    background-color: #2e2f42;
+    background-image: 
+    linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+    url("../images/bgi/people-office-1x.jpg");
+    max-width: 1440px;
     }
+       @media screen and (min-resolution: 2x),
+       (min-device-pixel-ratio: 2) {
+        .main-solutions {
+         background-image:
+         linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+         url("../images/bgi/people-office-2x.jpg");
+        }
+       }
+    
     .main-heading {
         margin-bottom: 48px;
     }
@@ -1069,17 +1101,27 @@ button {
         background-color: #fff;
     }
     .portfolio-item {
+        box-shadow: none;
         width: calc((100% - 48px) / 3);
     }
     .portfolio-item:hover {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     }
+
+    .page-footer {
+        padding: 100px 0; 
+    }
     .footer-info {
+        text-align: left;
         margin-right: 120px;
     }
 
     .footer-icons {
         margin-right: 80px;
     }
-   
+   .footer-subscribe {
+    display: flex;
+    flex-direction: column;
+    }
 }
+
