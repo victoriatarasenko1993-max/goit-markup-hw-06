@@ -316,10 +316,6 @@ button {
     background-color: #f4f4fd;
 }
 
-.team-container {
-    max-width: 296px;
-}
-
 .team {
     margin-bottom: 72px;
     font-weight: 700;
@@ -489,7 +485,7 @@ button {
     background-color: #2e2f42;
 }
 
-.footer-container {
+.footer-container  {
     gap: 72px;
     display: flex;
     flex-direction: column;
@@ -552,7 +548,7 @@ button {
     fill: #f4f4fd;
 }
 .footer-info {
-    /* gap: 72px; */
+    gap: 72px;
     width: 288px;
     text-align: center;
 }
@@ -606,7 +602,7 @@ button {
     flex-wrap: wrap;
     align-items: flex-start;
     width: 100%;
-    gap: 24px;
+    gap: 16px;
 }
 
 .footer-button {
@@ -664,7 +660,7 @@ button {
     width: 288px;
     min-height: 584px;
     border-radius: 4px;
-    padding: 24px;
+    padding: 72px 16px 24px;
     transform: translate(-50%,-50%);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background-color: #fcfcfc;
@@ -682,8 +678,9 @@ button {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 0;
-    right: 0;
+    outline: none;
+    top: 24px;
+    right: 24px;
     background-color: #e7e9fc;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -989,21 +986,52 @@ button {
     .portfolio-item-text {
         height: 300px;
     }
+    .footer-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 72px 24px;
+        text-align: left;
+        padding-left: 108px;
+        padding-right: 108px;
+    }
+    .footer-logo {
+        width: auto;
+        margin: 0;
+    }
     .footer-info,
     .footer-icons-heading,
     .footer-subscribe-heading {
         text-align: left;
     }
-    .footer-input {
+     .footer-form-label {
+        margin-right: 24px;
+     } 
+    .footer-icons {
+        align-items: flex-start;
+    }
+
+    .footer-subscribe {
+        width: auto;
+        align-items: flex-start;
+    }
+
+    .footer-form {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        flex-wrap: nowrap;
+    }
+
+    .footer-form-label {
         width: 264px;
     }
-    .footer-container {
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 0 108px;
-        gap: 72px 24px;
+
+    .footer-button {
+        white-space: nowrap;
     }
-}
+    }
+ 
         
  
     
@@ -1066,7 +1094,7 @@ button {
         line-height: 1.2;
     }
 
-    .feature-text {
+    .features-text {
         font-weight: 400;
     }
 
@@ -1107,7 +1135,16 @@ button {
     .portfolio-item:hover {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     }
-
+    .footer-container {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0;
+        align-items: baseline;
+        max-width: 1158px;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     .page-footer {
         padding: 100px 0; 
     }
@@ -1115,13 +1152,12 @@ button {
         text-align: left;
         margin-right: 120px;
     }
-
     .footer-icons {
         margin-right: 80px;
     }
-   .footer-subscribe {
-    display: flex;
-    flex-direction: column;
+    .footer-subscribe{
+        margin-left: auto;
+        width: auto;
     }
 }
 
