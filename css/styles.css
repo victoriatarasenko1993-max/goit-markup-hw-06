@@ -48,7 +48,9 @@ button {
 
 .page-header {
     border-bottom: 1px solid #e7e9fc;
-    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
+     0 1px 1px 0 rgba(46, 47, 66, 0.16),
+     0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -228,8 +230,7 @@ button {
     background-size: cover;
     }
 
-    @media screen and (min-resolution: 2x),
-    (min-device-pixel-ratio: 2) {
+    @media screen and (min-resolution: 192dpi) {
         .main-solutions {
         background-image:
             linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -329,6 +330,7 @@ button {
 .team-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 72px; 
 }
 
@@ -342,8 +344,11 @@ button {
 
 .team-item {
     width: 100%;
+    max-width: 264px;
     border-radius: 0 0 4px 4px;
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+     0 1px 1px 0 rgba(46, 47, 66, 0.16),
+      0 1px 6px 0 rgba(46, 47, 66, 0.08);
     background-color: #fff;
 }
 
@@ -365,6 +370,10 @@ button {
     text-align: center;
     margin-bottom: 8px;
     color: #434455;
+}
+.team-item-container .team-member,
+.team-item-container .team-text {
+    text-align: center;
 }
 
 .main-team-list {
@@ -571,7 +580,8 @@ button {
     background-color: transparent;
     color: #ffffff;
     border: 1px solid #ffffff;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-input:hover,
@@ -662,7 +672,9 @@ button {
     border-radius: 4px;
     padding: 72px 16px 24px;
     transform: translate(-50%,-50%);
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+     0 1px 3px 0 rgba(0, 0, 0, 0.12),
+      0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background-color: #fcfcfc;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -703,7 +715,7 @@ button {
 }
 
 .field {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
 .modal-text {
@@ -938,7 +950,7 @@ button {
         url("../images/bgi/people-office-tab-1x.jpg");
         max-width: 768px;
     }
-         @media screen and (min-resolution: 2x), (-webkit-min-device-pixel-ratio: 2) {
+         @media screen and (min-resolution: 192dpi) {
             .main-solutions {
             background-image: 
             linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
@@ -1065,8 +1077,7 @@ button {
     url("../images/bgi/people-office-1x.jpg");
     max-width: 1440px;
     }
-       @media screen and (min-resolution: 2x),
-       (min-device-pixel-ratio: 2) {
+       @media screen and (min-resolution: 192dpi) {
         .main-solutions {
          background-image:
          linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -1133,7 +1144,9 @@ button {
         width: calc((100% - 48px) / 3);
     }
     .portfolio-item:hover {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+     0px 1px 1px rgba(46, 47, 66, 0.16),
+      0px 2px 1px rgba(46, 47, 66, 0.08);
     }
     .footer-container {
         display: flex;
@@ -1160,4 +1173,3 @@ button {
         width: auto;
     }
 }
-
